@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background: rgb(1, 1, 93);
+  position: relative;
+  padding: 20px 5%;
+}
+
+#container {
+  padding: 30px 10%;
+}
+#container button {
+  color: white;
+  background-color: rgb(192, 0, 192);
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  transition: transform 0.5s, background-color 0.5s;
+  border: none;
+}
+#container button:hover {
+  transform: translateY(-5px);
+  background-color: rgb(253, 148, 253);
+}
+
+.pops {
+  padding: 30px 3%;
+  width: 30%;
+  height: 65vh;
+  overflow: hidden;
+  background-color: rgb(115, 115, 115);
+  border-radius: 10px;
+  position: absolute;
+  left: 30%;
+  display: none;
+  z-index: 100;
+}
+.pops.active-pops {
+  display: block;
+}
+.pops span {
+  color: red;
+  font-size: 1.7rem;
+  margin-left: 100%;
+  cursor: pointer;
+}
+.pops .inner-pops {
+  width: 100%;
+}
+.pops .inner-pops button {
+  padding: 5px 14px;
+  font-size: 1.2rem;
+}
+.pops .ultra-inner-pops {
+  color: white;
+  margin-top: 20px;
+  overflow: hidden;
+}
+.pops .ultra-inner-pops input {
+  width: 100%;
+  padding: 10px;
+}
+.pops .ultra-inner-pops textarea {
+  width: 100%;
+}
+
+#note-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+}
+#note-container .your-note {
+  width: 30%;
+  margin-top: 3%;
+  cursor: pointer;
+}
+#note-container .your-note .container {
+  background: linear-gradient(rgb(40, 197, 202), rgb(209, 0, 228));
+  padding: 15px 30px;
+  word-wrap: break-word;
+  height: 100%;
+}
+#note-container .your-note .container h2 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+#note-container .your-note .container p {
+  font-weight: 500;
+}
+#note-container .your-note .container span {
+  margin-left: 100%;
+  color: red;
+  cursor: pointer;
+}/*# sourceMappingURL=quiz.css.map */

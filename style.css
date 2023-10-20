@@ -1,0 +1,247 @@
+#portfolio .subtitle, #services .subtitle, #about .row .subtitle {
+  font-size: 3rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 18px;
+}
+
+.container {
+  padding: 10px 10%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #080808;
+  color: #fff;
+}
+
+#header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/images/background.png);
+  background-size: cover;
+  background-position: center;
+}
+#header .container {
+  padding: 10px 10%;
+}
+#header .container nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#header .container nav img {
+  width: 150px;
+}
+#header .container nav ul {
+  list-style: none;
+}
+#header .container nav ul li {
+  display: inline-block;
+}
+#header .container nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  margin: 10px 20px;
+  font-size: 1.1rem;
+  position: relative;
+}
+#header .container nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.3s;
+}
+#header .container nav ul li a:hover::after {
+  width: 100%;
+}
+#header .container .header-text {
+  margin-top: 20%;
+}
+#header .container .header-text p {
+  font-size: 1.8rem;
+}
+#header .container .header-text h1 {
+  font-size: 3.7rem;
+  margin-top: 20px;
+}
+#header .container .header-text h1 span {
+  color: #ff004f;
+}
+
+/* ------------- About ---------------- */
+#about {
+  color: #adadad;
+  margin-top: 10%;
+}
+#about .row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#about .row .about-col-1 {
+  flex-basis: 35%;
+}
+#about .row .about-col-1 img {
+  width: 100%;
+  border-radius: 10px;
+}
+#about .row .about-col-2 {
+  flex-basis: 60%;
+}
+#about .row .about-col-2 .about-selection {
+  display: flex;
+  margin: 20px 0 40px;
+}
+#about .row .about-col-2 .about-selection .content-link {
+  margin-right: 50px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+#about .row .about-col-2 .about-selection .content-link::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  transition: 0.4s;
+}
+#about .row .about-col-2 .about-selection .content-link:hover::after {
+  width: 100%;
+}
+#about .row .about-col-2 .about-selection .content-link.active-link::after {
+  width: 50%;
+}
+#about .row .about-col-2 .tabs-content ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+#about .row .about-col-2 .tabs-content ul li span {
+  color: #b54769;
+  font-size: 14px;
+}
+#about .row .about-col-2 .tabs-content {
+  display: none;
+}
+#about .row .about-col-2 .tabs-content.active-content {
+  display: block;
+}
+
+/*----------------------- Services --------------------------- */
+#services {
+  margin-top: 10%;
+}
+#services .services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+#services .services-list div {
+  background: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px;
+  transition: background 0.5s, transform 0.5s;
+}
+#services .services-list div:hover {
+  background: #ff004f;
+  transform: translateY(-15px);
+}
+#services .services-list div i {
+  font-size: 3rem;
+}
+#services .services-list div h2 {
+  font-size: 2rem;
+  margin: 25px 0 15px 0;
+  font-weight: 500;
+}
+#services .services-list div p {
+  font-size: 0.9rem;
+  color: white;
+}
+#services .services-list div a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: inline-block;
+}
+
+/*---------------------------------porfoilio---------------------------------*/
+#portfolio {
+  padding: 10% 0;
+}
+#portfolio .work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+#portfolio .work-list .work {
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+#portfolio .work-list .work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: 0.5s;
+}
+#portfolio .work-list .work .layer {
+  height: 0;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0 40px;
+  font-size: 14px;
+  transition: 0.5s;
+}
+#portfolio .work-list .work .layer h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+#portfolio .work-list .work .layer a {
+  background-color: white;
+  color: #ff004f;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-top: 20px;
+  text-align: center;
+}
+#portfolio .work-list .work:hover img {
+  transform: scale(1.2);
+}
+#portfolio .work-list .work:hover .layer {
+  height: 100%;
+}/*# sourceMappingURL=style.css.map */

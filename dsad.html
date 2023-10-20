@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+ <style>
+  .example {
+    padding: 0 15px;
+    cursor: pointer;
+    font-family: sans-serif;
+  }
+
+  .hatdog {
+    margin-top: 50px;
+    padding: 15px 30px;
+    font-family: sans-serif;
+    display: flex;
+    border: 2px solid blue;
+    width: 30%;
+    display: none;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid rgb(0, 83, 0);
+  }
+
+  .hatdog.active-hatdog {
+    display: block;
+  }
+ </style>
+</head>
+<body>
+  
+  <span class="example" onclick="hellas('hello')">Example1</span>
+  <span class="example" onclick="hellas('hi')">Example2</span>
+  <span class="example" onclick="hellas('eys')">Example3</span>
+
+  <div class="hatdog active-hatdog" id="hello">
+    <div class="container">
+      <h1>Hello</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio nostrum earum voluptate cupiditate veniam voluptatem quaerat vel iure voluptatum nobis cumque at, nam pariatur dicta aperiam delectus nesciunt accusamus ex?</p>
+      <a href="#">Learn more</a>
+    </div>
+  </div>
+
+  <div class="hatdog" id="hi">
+    <div class="container">
+      <h1>HI</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio nostrum earum voluptate cupiditate veniam voluptatem quaerat vel iure voluptatum nobis cumque at, nam pariatur dicta aperiam delectus nesciunt accusamus ex?</p>
+      <a href="#">Learn more</a>
+    </div>
+  </div>
+
+  <div class="hatdog" id="eys">
+    <div class="container">
+      <h1>Eyssss</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio nostrum earum voluptate cupiditate veniam voluptatem quaerat vel iure voluptatum nobis cumque at, nam pariatur dicta aperiam delectus nesciunt accusamus ex?</p>
+      <a href="#">Learn more</a>
+    </div>
+  </div>
+
+  <script>
+    const allHatdogs = document.querySelectorAll('.hatdog');
+
+    function hellas(par) {
+      allHatdogs.forEach((ey) => {
+        ey.classList.remove('active-hatdog');
+      });
+
+      document.getElementById(par).classList.add('active-hatdog');
+    }
+
+  </script>  
+</body>
+</html>
